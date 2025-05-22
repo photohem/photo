@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./css/register.css" />
+  </head>
+  <body>
+    <form action="./register.php" method="post">
+      <h2>회원가입</h2>
+      <label>
+        아이디:
+        <input type="text" name="username" required />
+      </label>
+      <label>
+        이메일:
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        비밀번호:
+        <input type="password" name="password" required />
+      </label>
+      <label>
+        비밀번호 확인:
+        <input type="password" name="confirm_password" required />
+      </label>
+      <button type="submit">가입하기</button>
+    </form>
+  </body>
+</html>
