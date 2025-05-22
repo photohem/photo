@@ -1,0 +1,102 @@
+/* 이용가이드 스타일 -pc */
+.heade {
+  margin-top: 72px; /* 헤더 아래 공백 */
+  background: #9bcff1;
+  color: white;
+  padding: 30px 0 30px;
+  text-align: left;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.byline {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.post-list {
+  list-style: none;
+}
+
+.post-list li {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 40px 0; /* 좌우 간격만 줄 것 */
+  border-bottom: 1px solid #ddd; /* 회색 라인 */
+}
+
+/* 마지막 항목 밑줄 제거 */
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-list .text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.post-list .text a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit;
+  cursor: pointer;
+  display: block;
+}
+
+/* 제목(h3) 스타일 */
+.post-list .text a h3 {
+  transition: border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  color: #333;
+}
+
+.post-list .text a:hover h3 {
+  border-bottom: 2px solid #222;
+}
+
+.post-list p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.meta {
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  background: #b7d8f7;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* 반응형 */
+@media screen and (max-width: 600px) {
+  .post-list li {
+    flex-direction: column;
+  }
+
+  .post-list .text {
+    padding-right: 0;
+  }
+
+  .thumbnail {
+    margin-top: 12px;
+    width: 100%;
+    height: 160px;
+  }
+}
