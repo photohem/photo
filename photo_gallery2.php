@@ -9,30 +9,7 @@
     <link rel="stylesheet" href="./css/footer.css" />
   </head>
   <body>
-    <!-- 헤더 -->
-    <header id="header" class="sub-header">
-      <div class="header-container">
-        <div class="left-section">
-          <div class="logo">
-            <a href="index.html">
-              <img src="./img/image-logo-w.png" alt="로고" />
-            </a>
-          </div>
-        </div>
-
-        <nav class="menu">
-          <a href="./shoot.html" id="menu1">찍어보이소</a>
-          <a href="./skill.html" id="menu2">알아보이소</a>
-        </nav>
-
-        <div class="right-section">
-          <div class="right-content-group">
-            <a class="right-content" href="#">로그인</a>
-            <a class="right-content" href="#">회원가입</a>
-          </div>
-        </div>
-      </div>
-    </header>
+  <?php include __DIR__ . '/header.php'; ?>
 
     <!-- 메인 -->
     <div class="banner-container">

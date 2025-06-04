@@ -175,8 +175,7 @@
   letter-spacing: 1px; /* 글자 간격 */
   opacity: 0; /* 기본적으로 안 보이게 */
   transform: translateX(-30px); /* 왼쪽으로 이동(등장 애니메이션용) */
-  transition: opacity 0.3s 0.1s,
-    /* 나타날 때 투명도 애니메이션 (0.1초 딜레이) */ transform 0.4s 0.1s; /* 이동 애니메이션 (0.1초 딜레이) */
+  transition: opacity 0.3s 0.1s, /* 나타날 때 투명도 애니메이션 (0.1초 딜레이) */ transform 0.4s 0.1s; /* 이동 애니메이션 (0.1초 딜레이) */
   pointer-events: none; /* 마우스 이벤트 무시 (클릭 등 방지) */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* 그림자 */
 }
@@ -228,17 +227,18 @@
 /* 반응형  1300px 이하*/
 @media screen and (max-width: 1300px) {
   .grid-container {
-    max-width: 1100px;}
-    
+    max-width: 1100px;
+  }
+
   #shoot-photo h2 {
-     width: 100%;
+    width: 100%;
     max-width: 1100px; /* grid-container와 맞춰도 되고, 100%도 무방 */
     margin: 0 0 20px 0; /* 왼쪽 정렬을 위해 auto 대신 0 */
     font-size: 1.5rem;
-    text-align: left;   /* 명확하게 왼쪽 정렬 */
+    text-align: left; /* 명확하게 왼쪽 정렬 */
   }
-  
-  .result{
+
+  .result {
     margin-bottom: 30px;
   }
 }
@@ -268,11 +268,11 @@
     margin-bottom: 30px;
   }
   #shoot-photo h2 {
-     width: 100%;
+    width: 100%;
     max-width: 850px; /* grid-container와 맞춰도 되고, 100%도 무방 */
     margin: 0 0 20px 0; /* 왼쪽 정렬을 위해 auto 대신 0 */
     font-size: 1.5rem;
-    text-align: left;   /* 명확하게 왼쪽 정렬 */
+    text-align: left; /* 명확하게 왼쪽 정렬 */
   }
   .place-name {
     font-size: 3rem;
@@ -281,8 +281,8 @@
     max-width: 850px;
     grid-auto-rows: 110px;
     gap: 2px;
-  }  
-  .result{
+  }
+  .result {
     margin-bottom: 30px;
   }
   .result-images .grid-item {
@@ -295,8 +295,9 @@
 /* 반응형  800px 이하*/
 @media screen and (max-width: 800px) {
   .grid-container {
-    max-width: 700px;}    
-  .result{
+    max-width: 700px;
+  }
+  .result {
     margin-bottom: 30px;
   }
 }
@@ -335,20 +336,20 @@
   }
   #shoot-photo h2 {
     width: 90vw;
-    max-width: 450PX; /* grid-container와 맞춰도 되고, 100%도 무방 */
+    max-width: 450px; /* grid-container와 맞춰도 되고, 100%도 무방 */
     margin: 0 0 20px 0; /* 왼쪽 정렬을 위해 auto 대신 0 */
     font-size: 1.1rem;
-    text-align: left;   /* 명확하게 왼쪽 정렬 */
+    text-align: left; /* 명확하게 왼쪽 정렬 */
   }
   .place-name {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
   .grid-container {
     max-width: 450px;
     grid-auto-rows: 80px;
     gap: 2px;
-  }  
-  .result{
+  }
+  .result {
     margin-bottom: 30px;
   }
   .result-images {

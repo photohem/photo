@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <title>로그인</title>
     <link rel="stylesheet" href="./css/common.css" />
+    <?php
+//카카오 로그인에 관련된 정보
+$kakaoRestApiKey = "bcbd2d1f29eee5af3a86213c9234ecfa"; //카카오톡에서 주는 ID
+$kakaoRedirectUri = "http://localhost/photo/kakao_login.php"; //로그인 후 DB처리할 URL
+$kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id={$kakaoRestApiKey}&redirect_uri={$kakaoRedirectUri}";
+?>
     <style>
       body {
         background-color: #f8f9fa;
@@ -61,11 +67,23 @@
         background-color: #0056b3;
       }
 
+      /* ✅ 카카오 로그인 버튼을 일반 버튼처럼 스타일링 */
       .kakao-btn {
-        background-color: #fee500;
-        color: #3c1e1e;
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+
+      .kakao-btn:hover {
+        background-color: #0056b3;
       }
 
       .link-row {
@@ -98,7 +116,8 @@
 
         <button type="submit">로그인</button>
 
-        <button type="button" class="kakao-btn" onclick="location.href='kakao_login.php'">카카오톡으로 로그인</button>
+        <!-- 수정 -->
+        <a href="<?=$kakaoLoginUrl?>" class="kakao-login-btn">카카오톡으로 로그인</a>
 
         <div class="link-row">
           <a href="find_id.php">아이디 찾기</a> |

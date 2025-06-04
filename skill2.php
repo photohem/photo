@@ -14,15 +14,15 @@
       <div class="header-container">
         <div class="left-section">
           <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
               <img src="./img/image-logo-w.png" alt="로고" />
             </a>
           </div>
         </div>
 
         <nav class="menu">
-          <a href="./shoot.html" id="menu1">찍어보이소</a>
-          <a href="./skill.html" id="menu2">알아보이소</a>
+          <a href="./shoot.php" id="menu1">찍어보이소</a>
+          <a href="./skill.php" id="menu2">알아보이소</a>
         </nav>
 
         <div class="right-section">
