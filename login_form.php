@@ -9,100 +9,14 @@
 $kakaoRestApiKey = "bcbd2d1f29eee5af3a86213c9234ecfa"; //카카오톡에서 주는 ID
 $kakaoRedirectUri = "http://localhost/photo/kakao_login.php"; //로그인 후 DB처리할 URL
 $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id={$kakaoRestApiKey}&redirect_uri={$kakaoRedirectUri}";
+$naverClientId = "6mfZvue5_NyY9uLM5gNe"; // 네이버 앱의 Client ID
+$naverRedirectUri = "http://localhost/photo/naver_login.php";
+$naverState = uniqid(); // CSRF 방지를 위한 state 값
+
+$naverLoginUrl = "https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id={$naverClientId}&redirect_uri={$naverRedirectUri}&state={$naverState}";
+
 ?>
-    <style>
-      body {
-        background-color: #f8f9fa;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      .container {
-        background: white;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 400px;
-        text-align: center;
-      }
-
-      h2 {
-        margin-bottom: 20px;
-        color: #005299;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      label {
-        align-self: flex-start;
-        margin: 10px 0 5px;
-      }
-
-      input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-bottom: 15px;
-      }
-
-      button:hover {
-        background-color: #0056b3;
-      }
-
-      /* ✅ 카카오 로그인 버튼을 일반 버튼처럼 스타일링 */
-      .kakao-btn {
-        display: inline-block;
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        margin-bottom: 15px;
-        cursor: pointer;
-      }
-
-      .kakao-btn:hover {
-        background-color: #0056b3;
-      }
-
-      .link-row {
-        text-align: center;
-        font-size: 14px;
-        margin-top: 10px;
-      }
-
-      .link-row a {
-        color: #005299;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: bold;
-      }
-
-      .link-row a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/login_form.css" />
   </head>
   <body>
     <div class="container">
@@ -118,6 +32,8 @@ $kakaoLoginUrl = "https://kauth.kakao.com/oauth/authorize?response_type=code&cli
 
         <!-- 수정 -->
         <a href="<?=$kakaoLoginUrl?>" class="kakao-login-btn">카카오톡으로 로그인</a>
+        <a href="<?=$naverLoginUrl?>" class="naver-login-btn">네이버로 로그인</a>
+
 
         <div class="link-row">
           <a href="find_id.php">아이디 찾기</a> |
