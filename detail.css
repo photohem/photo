@@ -1,0 +1,446 @@
+/* 대구명소들의 상세페이지 스타일 */
+.all-place-container {
+  max-width: 100vw;
+  margin: 110px auto 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%; /* 부모 컨테이너 크기 맞추기 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 자식(섹션)들을 수평 가운데 정렬 */
+}
+
+.description-section {
+  max-width: 100vw;
+}
+
+/* 전체 슬라이더 영역 스타일 */
+.bx-wrapper {
+  width: 100vw !important;
+  max-width: 100vw;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: none !important;
+  margin-bottom: 15px !important; /* 슬라이더 아래 여백 */
+}
+
+.image-slider img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* bxSlider 화살표 버튼 스타일  */
+.bx-wrapper .bx-controls-direction a {
+  z-index: 10 !important;
+  width: 60px !important;
+  height: 60px !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-indent: 0 !important;
+  font-size: 0;
+  line-height: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.bx-wrapper .bx-controls-direction a:hover {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* 화살표 아이콘 스타일 */
+.arrow-next,
+.arrow-prev {
+  color: #eee;
+  font-size: 2.3rem !important;
+  font-style: normal;
+  line-height: 1;
+}
+
+/* 화살표 위치 조정 */
+.bx-wrapper .bx-prev {
+  text-align: center;
+  background-image: none !important;
+}
+
+.bx-wrapper .bx-next {
+  right: 10px;
+  background-image: none !important;
+}
+
+/* 페이저 전체 중앙 정렬 */
+.bx-wrapper .bx-pager {
+  text-align: center !important;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: rgba(255, 255, 255, 0.5);
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #fff;
+}
+
+/* 전체 슬라이더 테두리 제거 */
+.bx-wrapper {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+/* 슬라이더 로딩 시 이미지가 겹쳐 보이는 것 방지 */
+.image-slider li:not(:first-child) {
+  display: none;
+}
+
+/* 슬라이더 로딩 후 모든 이미지 표시 */
+.bx-viewport .image-slider li {
+  display: block !important;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start,
+.bx-wrapper .bx-controls-auto .bx-stop {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 설명과 인포 섹션 */
+.description-section {
+  max-width: 1100px;
+}
+
+/* 설명과 인포를 flex로 배치 */
+.description-section {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* 왼쪽: 설명 */
+.place-description {
+  width: 60%;
+}
+
+.place-description p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* 오른쪽: 인포 */
+.photo-info {
+  width: 40%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: fit-content;
+  align-self: flex-start;
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info-item {
+  background: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.photo-info .info-item:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.info-item span {
+  font-size: 0.9rem;
+}
+
+/* 지도 */
+.map-section {
+  max-width: 1100px;
+  margin-top: 15px; /* 지도 위 여백 */
+}
+
+.map-section iframe {
+  max-width: 1100px;
+  border-radius: 10px;
+}
+
+/* 이동 링크 */
+.all-place-container a {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  background-color: #0095ff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.all-place-container a:hover {
+  background-color: #79e2ff;
+}
+
+/* 댓글과 평가 영역 스타일 */
+/* 전체 섹션 크기 제한 및 가운데 정렬 */
+.feedback-section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.feedback-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+/* 댓글 영역 - 60% */
+.comment-box {
+  flex: 0 0 58%; /* 간격을 위해 58%로 조정 */
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+/* 스팟댓글 제목 */
+.comment-box h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.comment-box span {
+  color: #888;
+  font-weight: normal;
+}
+
+/* 평가 영역 - 40% */
+.rating-box {
+  flex: 0 0 38%; /* 간격을 위해 38%로 조정 */
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.rating-box h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.rating-box > h2 > span:first-child {
+  color: #888;
+  font-weight: normal;
+}
+
+/* 강조 문구 */
+.placeholder-box {
+  width: 550px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 0.85rem;
+  transition: border-color 0.3s;
+}
+
+.placeholder-box:hover {
+  border-color: #f60;
+}
+
+.placeholder-box .highlight {
+  color: #f60;
+  font-weight: bold;
+}
+
+/* 별점 */
+.stars {
+  color: #ffa500;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.rating-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.rating-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-bar > span:first-child {
+  color: #ffa500;
+  min-width: 70px;
+}
+
+.rating-bar > span:last-child {
+  min-width: 20px;
+  text-align: right;
+  color: #666;
+}
+
+.rating-bar .bar {
+  background-color: #eee;
+  flex: 1;
+  height: 13px; /* 평가 바 두께 */
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.rating-bar .bar div {
+  height: 100%;
+  background-color: #ffa500;
+  transition: width 0.3s;
+}
+
+/* 평가 버튼 */
+.rate-button {
+  background-color: #f60;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.65rem;
+  transition: background-color 0.3s;
+}
+
+.rate-button:hover {
+  background-color: #e55a00;
+}
+
+/* 반응형 - 태블릿 스타일 */
+@media screen and (max-width: 1000px) {
+  .description-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .place-description,
+  .photo-info {
+    width: 100%;
+  }
+
+  .photo-info {
+    align-self: stretch;
+  }
+
+  .map-section {
+    padding: 10px; /* map-section 내부 상하좌우 여백 */
+    width: 96%; /* map-section 너비 */
+    margin: 10px auto; /* 바깥 상,하,좌,우 여백 10px, 좌우 auto로 가운데정렬 */
+  }
+
+  .map-section iframe {
+    height: 350px;
+  } /* 지도의 높이 */
+}
+
+/* 반응형 - 모바일 스타일 */
+@media (max-width: 600px) {
+  .all-place-container {
+    margin: 130px auto 30px; /* 헤더 아래까지 여백*/
+    border-radius: 0;
+  }
+
+  .description-section {
+    padding: 10px;
+  }
+
+  .place-description h1 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  .place-description p {
+    font-size: 0.9rem;
+  }
+
+  .photo-tip h3 {
+    font-size: 1.1rem;
+    margin: 5px 0 4px 0;
+  }
+
+  .photo-info {
+    padding: 10px; /* 회색 테두리 */
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+
+  .info-item {
+    padding: 5px;
+    font-size: 0.85rem;
+  }
+
+  .info-item span {
+    font-size: 0.8rem;
+  }
+
+  .map-section iframe {
+    width: 100%;
+  }
+
+  .bx-wrapper .bx-controls-direction a {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .arrow-next,
+  .arrow-prev {
+    font-size: 2.2rem !important;
+  }
+
+  .all-place-container a {
+    font-size: 0.9rem;
+    padding: 10px 10px;
+  }
+
+  .feedback-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .comment-box,
+  .rating-box {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}

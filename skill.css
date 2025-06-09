@@ -1,0 +1,124 @@
+/* 알아보이소 스타일 -pc */
+
+.knowhow-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 0;
+  margin-top: 100px; /* 헤더 아래 위치 여백 */
+}
+
+/*  제목 */
+.knowhow-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  color: #111;
+}
+
+.knowhow-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.knowhow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 한 줄에 2개 */
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.knowhow-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: #fff;
+}
+
+/* 이미지 */
+.knowhow-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.knowhow-card img:hover {
+  transform: scale(1.02);
+}
+
+/* 카드 제목 */
+.knowhow-title {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #777;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.knowhow-title:hover {
+  color: #0095ff;
+  text-decoration: underline;
+}
+
+/* 카드 날짜 */
+.knowhow-meta {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* 반응형 태블릿: 1000px 이하 */
+@media (max-width: 1000px) {
+  .knowhow-heading {
+    padding: 0 20px;
+  }
+
+  .knowhow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .knowhow-card {
+    padding: 0 20px;
+  }
+
+  .knowhow-title {
+    font-size: 0.95rem;
+  }
+
+  .knowhow-meta {
+    font-size: 0.8rem;
+  }
+
+  .knowhow-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* 반응형 모바일: 600px 이하 */
+@media (max-width: 600px) {
+  .knowhow-heading {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .knowhow-grid {
+    grid-template-columns: 1fr; /* 모바일: 1개 */
+  }
+
+  .knowhow-card {
+    padding: 0 20px;
+  }
+
+  .knowhow-title {
+    font-size: 0.9rem;
+  }
+
+  .knowhow-meta {
+    font-size: 0.75rem;
+  }
+
+  .knowhow-heading {
+    font-size: 1.4rem;
+  }
+}

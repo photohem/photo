@@ -1,0 +1,106 @@
+/* 메인3 키워드 명소 스타일 -pc */
+
+.keyword-section {
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 키워드 명소 제목 */
+.keyword-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* 키워드 명소 테이블 */
+.keyword-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 한 줄에 8칸 */
+  grid-template-rows: repeat(3, 120px); /* 3행 전체 높이 */
+  gap: 0; /* 간격 없앰 */
+  max-width: 1100px; /* 테이블 전체 너비 고정 */
+  width: 100%; /* 반응형 유지 */
+  margin: 0 auto; /* 가운데 정렬 */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.keyword-item {
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex; /* Flexbox 사용 */
+  align-items: center; /* 세로 가운데 정렬 */
+  justify-content: center; /* 가로 가운데 정렬 */
+  border-left: none;
+  border-top: none;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  color: #111;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+/* 첫 번째 행에만 위쪽 border */
+.keyword-item:nth-child(-n + 8) {
+  border-top: 1px solid #e0e0e0;
+}
+/* 첫 번째 열에만 왼쪽 border */
+.keyword-item:nth-child(8n + 1) {
+  border-left: 1px solid #e0e0e0;
+}
+
+.keyword-item:hover {
+  color: #0095ff;
+  border-left: 1px solid #0095ff; /* 왼쪽 라인도 색상 적용 */
+  border-right: 1px solid #0095ff;
+  border-top: 1px solid #0095ff;
+  border-bottom: 1px solid #0095ff;
+}
+
+/* 반응형- 태블릿 스타일 */
+@media (max-width: 1000px) {
+  .keyword-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 100px); /* 4x6 */    
+    max-width: 800px; /* 테이블 전체 너비 고정 */
+  }
+
+  .keyword-item {
+    font-size: 0.85rem;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+  }
+
+  .keyword-item:nth-child(-n + 4) {
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .keyword-item:nth-child(4n + 1) {
+    border-left: 1px solid #e0e0e0;
+  }
+}
+
+/* 반응형- 모바일 스타일 */
+@media (max-width: 600px) {
+  
+/* 키워드 명소 제목 */
+.keyword-title {
+  font-size: 1.2rem;
+}
+  .keyword-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 90px); /* 3x8 */    
+    max-width: 400px; /* 테이블 전체 너비 고정 */
+  }
+
+  .keyword-item {
+    font-size: 0.8rem;
+    /* 모든 방향에 border 적용 */
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box; /* border 포함 크기 계산 */
+  }
+}

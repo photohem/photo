@@ -1,0 +1,63 @@
+/* 공통 배경 및 폰트 스타일 */
+body {
+  background-color: #b1e5ff;
+  font-family: Arial, sans-serif;
+  color: #0076b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 폼 컨테이너 */
+form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 117, 182, 0.2);
+  width: 320px;
+}
+
+/* 제목 */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0095ff;
+}
+
+/* 각 라벨 */
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* 텍스트/패스워드 입력 필드 */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #b0b7bc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* 버튼 스타일 */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0095ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0076b6;
+}
